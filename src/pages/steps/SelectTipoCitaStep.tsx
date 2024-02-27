@@ -1,9 +1,14 @@
 import Button from "@/components/Button";
-import { Link } from "react-router-dom";
+import { setAppDataTipoCita } from "@/stores/data";
 import passport from "../../assets/image.png";
 import { setAppStatusCurpsStep } from "../../stores/steps";
 
 export default function SelectTipoCitaStep() {
+  const handleClick = (type: string) => {
+    setAppStatusCurpsStep()
+    setAppDataTipoCita(type)
+  }
+
   return (
     <>
       <h2 className="font-bold text-xl md:text-3xl text-center mt-3">
@@ -17,27 +22,21 @@ export default function SelectTipoCitaStep() {
         />
       </div>
 
-      <p className="my-2 mb-3 mt-6 text-lg text-neutral-700">
-        ¿Que tipo de tramite quieres realizar?
-      </p>
 
-      <div className="grid md:grid-cols-3 gap-3 md:gap-5">
+      <div className="grid md:grid-cols-3 gap-3 md:gap-5 mt-14">
         <Button
           variant="primary"
-          label="Primera Vez" onClick={() => setAppStatusCurpsStep()} />
+          label="Primera Vez"
+          onClick={() => handleClick("Primera Vez")} />
         <Button
           variant="primary"
-          label="Renovacion" onClick={() => setAppStatusCurpsStep()} />
+          label="Renovacion"
+          onClick={() => handleClick("Renovacion")} />
         <Button
           variant="primary"
-          label="Pasaporte Extraviado" onClick={() => setAppStatusCurpsStep()} />
+          label="Pasaporte Extraviado"
+          onClick={() => handleClick("Pasaporte Extraviado")} />
       </div>
-
-      <Link to="/tyc">
-        <p className="text-center hover:underline hover:cursor-pointer mt-7">
-          Terminos y condiciones
-        </p>
-      </Link>
     </>
   )
 }

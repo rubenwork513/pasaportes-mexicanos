@@ -1,7 +1,12 @@
 import StepHeader from "@/components/StepHeader";
 import { Button } from "@/components/ui/button";
-import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form";
+import {
+  Form, FormControl,
+  FormField, FormItem,
+  FormMessage
+} from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { setAppDataCurps } from "@/stores/data";
 import { setAppStatusMigratorioStep } from "@/stores/steps";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { ArrowRight } from "lucide-react";
@@ -42,7 +47,7 @@ export default function CurpsStep() {
   })
 
   function onSubmit(data: CurpsFormValues) {
-    console.log(data)
+    setAppDataCurps(data.curps.map((curp) => curp.value))
     setAppStatusMigratorioStep()
   }
 
@@ -104,6 +109,7 @@ export default function CurpsStep() {
             <Button
               type="submit"
               className="px-10"
+              disabled={!form.formState.isValid}
             >
               Continuar el tramite
               <ArrowRight className="ml-2 size-4" />

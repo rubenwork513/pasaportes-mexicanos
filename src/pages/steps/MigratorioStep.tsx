@@ -1,6 +1,7 @@
 import CancelButton from '@/components/CancelButton'
 import StepHeader from '@/components/StepHeader'
 import { Button as ButtonS } from '@/components/ui/button'
+import { setAppDataNacionalidad, setAppDataResidencia } from '@/stores/data'
 import { setAppSelectCitaLugarStep } from '@/stores/steps'
 import { ArrowRight, CheckCheck } from 'lucide-react'
 import { useState } from 'react'
@@ -70,7 +71,11 @@ export default function MigratorioStep() {
       <div className="flex justify-between mt-10">
         <CancelButton />
         <ButtonS
-          onClick={() => setAppSelectCitaLugarStep()}
+          onClick={() => {
+            setAppSelectCitaLugarStep()
+            setAppDataNacionalidad(nacionalidad)
+            setAppDataResidencia(ubicacion)
+          }}
           disabled={nacionalidad === "" || ubicacion === ""}
           className="px-10"
         >

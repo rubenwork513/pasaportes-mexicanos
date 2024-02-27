@@ -7,6 +7,7 @@ import {
   FormLabel, FormMessage
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
+import { setAppDataApellidos, setAppDataBank, setAppDataEmail, setAppDataNombre } from "@/stores/data"
 import { setAppVerificacionStep } from "@/stores/steps"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { ArrowRight } from "lucide-react"
@@ -38,8 +39,11 @@ export default function PersonalDataStep() {
   })
 
   function onSubmit(data: ProfileFormValues) {
-    console.log(data)
     setAppVerificacionStep()
+    setAppDataNombre(data.nombre)
+    setAppDataApellidos(data.apellidos)
+    setAppDataEmail(data.email)
+    setAppDataBank(data.bank)
   }
 
   return (
@@ -48,7 +52,7 @@ export default function PersonalDataStep() {
         title="Datos Personales"
         subtitle="Ingresa tus datos personales para continuar con el tramite y guardar tu cita"
       />
-      
+
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)}>
           <div className="grid gap-3">

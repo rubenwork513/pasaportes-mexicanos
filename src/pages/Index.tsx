@@ -1,3 +1,4 @@
+import { useDataStore } from "@/stores/data";
 import MainLayout from "../layouts/MainLayout";
 import { APP_STATUS, useStepsStore } from "../stores/steps";
 import CurpsStep from "./steps/CurpsStep";
@@ -12,6 +13,9 @@ import VerificarDatosStep from "./steps/VerificarDatosStep";
 
 export default function IndexPage() {
   const { status } = useStepsStore()
+  const { data } = useDataStore()
+
+  console.log(data)
 
   return (
     <MainLayout>
