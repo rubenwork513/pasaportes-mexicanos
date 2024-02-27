@@ -1,13 +1,10 @@
 import CancelButton from "@/components/CancelButton";
 import StepHeader from "@/components/StepHeader";
 import { Button } from "@/components/ui/button";
-import { useDataStore } from "@/stores/data";
 import { setAppSuccessStep } from "@/stores/steps";
 import { ArrowRight } from "lucide-react";
 
 export default function VerificarDatosStep() {
-  const { data } = useDataStore()
-
   return (
     <div>
       <StepHeader
