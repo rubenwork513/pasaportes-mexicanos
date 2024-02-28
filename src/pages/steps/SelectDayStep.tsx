@@ -12,7 +12,7 @@ export default function SelectDayStep() {
         subtitle="Selecciona un dia y una hora para tu cita, recuerda que deberas ser puntual"
       />
 
-      <div className="flex justify-between mt-10">
+      <div className="flex flex-col-reverse md:flex-row justify-between mt-10 gap-4">
         <CancelButton />
         <Button
           onClick={() => setAppVigenciaStep()}

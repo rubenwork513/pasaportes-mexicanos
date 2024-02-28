@@ -39,7 +39,7 @@ export default function SelectVigenciaStep() {
         </SelectContent>
       </Select>
 
-      <div className="flex justify-between mt-10">
+      <div className="flex flex-col-reverse md:flex-row justify-between mt-10 gap-4">
         <CancelButton />
         <Button
           onClick={() => {

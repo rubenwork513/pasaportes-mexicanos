@@ -1,3 +1,6 @@
+import {
+  Accordion, AccordionContent, AccordionItem, AccordionTrigger
+} from "@/components/ui/accordion"
 import { terminosYCondiciones } from "../data/tyc"
 import MainLayout from "../layouts/MainLayout"
 
@@ -13,29 +16,27 @@ export default function LegalPage() {
           {principal}
         </p>
 
-        {articulos.map((articulo, index) => {
-          const { principal, subarticulos } = articulo
+        <Accordion type="single" collapsible className="w-full">
+          {articulos.map((articulo, index) => {
+            const { principal, subarticulos } = articulo
 
-          return (
-            <div className="mb-6">
-              <p
-                key={index}
-                className="font-semibold text-lg my-2"
-              >
-                {principal}
-              </p>
-              {subarticulos && subarticulos.map(({ content }) => {
-                return (
-                  <p className=" leading-relaxed ml-4 mb-2">
-                    {content}
-                  </p>
-                )
-              })}
-            </div>
-          )
-        })}
+            return (
+              <AccordionItem key={index} className="mb-2" value={principal}>
+                <AccordionTrigger>
+                  {principal}
+                </AccordionTrigger>
+                <AccordionContent>
+                  {subarticulos && subarticulos.map(({ content }) => (
+                    <p key={content} className="leading-relaxed ml-4 mb-2">
+                      {content}
+                    </p>
+                  ))}
+                </AccordionContent>
+              </AccordionItem>
+            )
+          })}
+        </Accordion>
       </div>
-
     </MainLayout>
   )
 }

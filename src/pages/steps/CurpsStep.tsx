@@ -104,7 +104,7 @@ export default function CurpsStep() {
             Eliminar CURP
           </Button>
 
-          <div className="flex justify-between mt-10">
+          <div className="flex flex-col-reverse md:flex-row justify-between mt-10 gap-4">
             <CancelButton />
             <Button
               type="submit"

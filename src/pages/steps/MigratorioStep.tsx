@@ -68,7 +68,13 @@ export default function MigratorioStep() {
         </Button>
       </div>
 
-      <div className="flex justify-between mt-10">
+      {nacionalidad === "Extranjera" && (
+        <div className="p-2 flex justify-center items-center mt-5 text-red-500">
+          Actualmente el servicio solo esta disponible para la republica mexicana
+        </div>
+      )}
+
+      <div className="flex flex-col-reverse md:flex-row justify-between mt-10 gap-4">
         <CancelButton />
         <ButtonS
           onClick={() => {
@@ -76,7 +82,7 @@ export default function MigratorioStep() {
             setAppDataNacionalidad(nacionalidad)
             setAppDataResidencia(ubicacion)
           }}
-          disabled={nacionalidad === "" || ubicacion === ""}
+          disabled={nacionalidad === "Mexicana" && ubicacion === "Mexicana" ? false : true}
           className="px-10"
         >
           Continuar el tramite
