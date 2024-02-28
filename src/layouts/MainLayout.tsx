@@ -5,7 +5,7 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
   return (
     <>
       <Navbar />
-      <div className="w-[920px] mx-auto max-w-full md:pt-10 pt-4 px-4 pb-10">
+      <div className="w-[920px] mx-auto max-w-full md:pt-10 pt-4 px-4 pb-20">
         {children}
       </div>
       <Footer />

@@ -8,8 +8,9 @@ import {
   SelectLabel, SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-import { setAppDataHoraCita } from "@/stores/data"
+import { setAppDataDiaCita, setAppDataHoraCita } from "@/stores/data"
 import { setAppVigenciaStep } from "@/stores/steps"
+import { format } from 'date-fns'
 import { es } from 'date-fns/locale'
 import { ArrowRight } from "lucide-react"
 import { useState } from "react"
@@ -28,8 +29,6 @@ export default function SelectDayStep() {
   const currentDate = new Date();
   const fromMonth = new Date(2024, currentDate.getMonth() - 1);
   const toMonth = new Date(2024, fromMonth.getMonth() + 8);
-
-  console.log("disabled", currentDate.getDate())
 
   const disabledDays = [
     new Date(
@@ -62,7 +61,13 @@ export default function SelectDayStep() {
       currentDate.getMonth(),
       currentDate.getDate() + 18
     ),
-    { from: new Date(2024, 4, 18), to: new Date(2024, 4, 29) }
+    {
+      from: new Date(
+        currentDate.getFullYear(),
+        currentDate.getMonth(),
+        currentDate.getDate() - 1),
+      to: new Date(2024, 1, 0)
+    }
   ];
 
   return (
@@ -101,7 +106,7 @@ export default function SelectDayStep() {
       <div className="flex flex-col gap-4">
         <div className="[&>p]:text-sm [&>p>span]:rounded-sm [&>p]:flex [&>p]:gap-2 [&>p]:items-center flex flex-col md:flex-row md:gap-5 gap-2 px-1">
           <p><span className="flex size-4 bg-yellow-300" /> Hoy</p>
-          <p><span className="flex size-4 bg-green-300" /> Disponible</p>
+          <p><span className="flex size-4 bg-green-300" /> Seleccionado</p>
           <p><span className="flex size-4 bg-red-300" /> No Disponible</p>
         </div>
       </div>
@@ -133,8 +138,10 @@ export default function SelectDayStep() {
       <div className="flex flex-col-reverse md:flex-row justify-between mt-10 gap-4">
         <CancelButton />
         <Button
+          disabled={!hora || !date}
           onClick={() => {
             setAppVigenciaStep()
+            setAppDataDiaCita(format(date as Date, "EEEE dd \'de\' MMMM \'de\' yyyy", { locale: es }) as string)
             setAppDataHoraCita(hora)
           }}
           className="px-10"

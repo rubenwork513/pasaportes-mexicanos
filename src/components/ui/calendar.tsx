@@ -36,13 +36,13 @@ function Calendar({
         row: "flex w-full mt-2",
         cell: "h-11 w-11 text-center text-sm p-0 mx-1 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-accent/50 [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20",
         day: cn(
-          buttonVariants({ variant: "ghost" }),
+          buttonVariants({ variant: "ghost",  }),
           "h-12 w-12 p-0 font-normal aria-selected:opacity-100"
         ),
         day_range_end: "day-range-end",
         day_selected:
-          "bg-green-500 text-primary-foreground hover:bg-primary hover:text-primary-foreground focus:bg-green-500 focus:text-primary-foreground",
-        day_today: "bg-accent text-accent-foreground",
+          "bg-green-500 text-white hover:bg-green-200 hover:text-white focus:bg-green-500 focus:text-white",
+        day_today: "bg-yellow-300 text-accent-foreground",
         day_outside:
           "day-outside text-muted-foreground opacity-50 aria-selected:bg-accent/50 aria-selected:text-muted-foreground aria-selected:opacity-30",
         day_disabled: "text-red-800 bg-red-100 cursor-not-allowed",
@@ -52,8 +52,8 @@ function Calendar({
         ...classNames,
       }}
       components={{
-        IconLeft: ({ ...props }) => <ChevronLeft className="h-4 w-4" />,
-        IconRight: ({ ...props }) => <ChevronRight className="h-4 w-4" />,
+        IconLeft: () => <ChevronLeft className="h-4 w-4" />,
+        IconRight: () => <ChevronRight className="h-4 w-4" />,
       }}
       {...props}
     />

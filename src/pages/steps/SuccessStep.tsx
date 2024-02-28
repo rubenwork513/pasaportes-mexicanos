@@ -1,59 +1,60 @@
 import StepHeader from "@/components/StepHeader";
-import { useDataStore } from "@/stores/data";
+import { setAppDataClear, useDataStore } from "@/stores/data";
 import { setAppStatusSelectTipoCitaStep } from "@/stores/steps";
 import { AlertTriangle } from "lucide-react";
-import { setAppDataClear } from "@/stores/data";
 
 export default function SuccessStep() {
   const { data } = useDataStore()
 
-  const { diaCita, horaCita, vigenciaPrecio } = data
+  const { diaCita, horaCita, vigenciaPrecio, curps } = data
 
   return (
     <div>
       <StepHeader
         title="Referencia de pago creada con exito!"
-        subtitle="Recuerda que debes de pagar para que tu cita sea agendada, al no realizar su pago este caducara y perdera su turno."
+        subtitle="Recuerda que debes de pagar para que tu cita sea agendada, al no realizar su pago este caducara y perdera su turno. Referencia de pago valida por 24 horas."
       />
 
+      <p className="text-lg font-bold text-blue-600 mb-4">
+        Estimado(a): {data.nombre + " " + data.apellidos}
+      </p>
+
       <div className="p-4 border-4 border-dotted border-neutral-500 rounded-md 
-      [&>div]:my-2 [&>div]:flex [&>div]:items-start [&>div]:gap-3
-      [&>div>p]:font-bold [&>div>p]:text-base [&>div>p]:text-neutral-500
-      [&>div>span]:text-lg [&>div>span]:text-black [&>div>span]:font-bold ">
-        <div>
-          <p>Fecha y hora de la cita:</p>
-          {diaCita && horaCita && <span>{diaCita} - {horaCita}</span>}
+      [&>div]:my-2 [&>div>span]:text-black [&>div>span]:font-bold">
+
+        <div className="flex gap-0 md:gap-3 md:flex-row flex-col">
+          Fecha y hora de la cita:
+          {diaCita && horaCita && <span className="capitalize">{diaCita} - {horaCita}</span>}
         </div>
 
-        <div>
-          <p>Monto a pagar:</p>
-          {vigenciaPrecio && <span>{vigenciaPrecio}</span>}
+        <div className="flex gap-0 md:gap-3 md:flex-row flex-col">
+          Monto a pagar:
+          {vigenciaPrecio && <span>{"$" + vigenciaPrecio * curps.length}</span>}
         </div>
 
-        <div>
-          <p>CLABE interbancaria:</p>
+        <div className="flex gap-0 md:gap-3 md:flex-row flex-col">
+          CLABE interbancaria:
           <span>7109 6900 0031 7260 43</span>
         </div>
 
-        <div>
-          <p>Institucion bancaria:</p>
+        <div className="flex gap-0 md:gap-3 md:flex-row flex-col">
+          Institucion bancaria:
           <span>NVIO</span>
         </div>
 
-        <div>
-          <p>Beneficiario:</p>
+        <div className="flex gap-0 md:gap-3 md:flex-row flex-col">
+          Beneficiario:
           <span>Afiliado Mi Pasaporte</span>
         </div>
 
-        <div>
-          <p>Concepto de pago:</p>
+        <div className="flex gap-0 md:gap-3 md:flex-row flex-col">
+          Concepto de pago:
           <span>SRE</span>
         </div>
-
       </div>
 
       <div
-        className="bg-red-300 p-4 rounded-md flex justify-center items-center shadow-xl shadow-transparent hover:shadow-black/10 hover:cursor-pointer my-6"
+        className="bg-red-200 p-4 rounded-md flex justify-center items-center shadow-xl shadow-transparent hover:shadow-black/10 hover:cursor-pointer my-6 font-bold"
         onClick={() => {
           setAppStatusSelectTipoCitaStep()
           setAppDataClear()

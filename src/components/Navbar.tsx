@@ -3,7 +3,7 @@ import logo from "../assets/logo.png";
 
 export default function Navbar() {
   return (
-    <nav className="flex h-20 w-full bg-[#00281f] items-center px-12 justify-center ">
+    <nav className="flex h-20 w-full bg-[#00281f] items-center px-6 md:px-12 justify-center ">
       <div className="flex items-center justify-between w-full">
         <Link to="/">
           <img
