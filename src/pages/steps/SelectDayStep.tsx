@@ -1,10 +1,70 @@
 import CancelButton from "@/components/CancelButton"
 import StepHeader from "@/components/StepHeader"
 import { Button } from "@/components/ui/button"
+import { Calendar } from "@/components/ui/calendar"
+import {
+  Select, SelectContent,
+  SelectGroup, SelectItem,
+  SelectLabel, SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
+import { setAppDataHoraCita } from "@/stores/data"
 import { setAppVigenciaStep } from "@/stores/steps"
+import { es } from 'date-fns/locale'
 import { ArrowRight } from "lucide-react"
+import { useState } from "react"
+
+const horas = [
+  "08:30", "09:00", "09:30", "10:00", "10:30",
+  "11:00", "11:30", "12:00", "12:30", "13:00",
+  "13:30", "14:00", "14:30", "15:00",
+]
 
 export default function SelectDayStep() {
+  const [hora, setHora] = useState("")
+  const [date, setDate] = useState<Date | undefined>(new Date())
+
+  // determinar el mes de inicio, en este caso el mes actual
+  const currentDate = new Date();
+  const fromMonth = new Date(2024, currentDate.getMonth() - 1);
+  const toMonth = new Date(2024, fromMonth.getMonth() + 8);
+
+  console.log("disabled", currentDate.getDate())
+
+  const disabledDays = [
+    new Date(
+      currentDate.getFullYear(),
+      currentDate.getMonth(),
+      currentDate.getDate() + 3
+    ),
+    new Date(
+      currentDate.getFullYear(),
+      currentDate.getMonth(),
+      currentDate.getDate() + 9
+    ),
+    new Date(
+      currentDate.getFullYear(),
+      currentDate.getMonth(),
+      currentDate.getDate() + 2
+    ),
+    new Date(
+      currentDate.getFullYear(),
+      currentDate.getMonth(),
+      currentDate.getDate() + 12
+    ),
+    new Date(
+      currentDate.getFullYear(),
+      currentDate.getMonth(),
+      currentDate.getDate() + 14
+    ),
+    new Date(
+      currentDate.getFullYear(),
+      currentDate.getMonth(),
+      currentDate.getDate() + 18
+    ),
+    { from: new Date(2024, 4, 18), to: new Date(2024, 4, 29) }
+  ];
+
   return (
     <div>
       <StepHeader
@@ -12,10 +72,71 @@ export default function SelectDayStep() {
         subtitle="Selecciona un dia y una hora para tu cita, recuerda que deberas ser puntual"
       />
 
+      <Calendar
+        mode="single"
+        selected={date}
+        onSelect={setDate}
+        className="rounded-md border my-4 p-6 hidden md:flex justify-center items-center"
+        numberOfMonths={2}
+        locale={es}
+        disabled={disabledDays}
+        showOutsideDays={false}
+        fromMonth={fromMonth}
+        toMonth={toMonth}
+      />
+
+      <Calendar
+        mode="single"
+        selected={date}
+        onSelect={setDate}
+        className="rounded-md border my-4 p-6 w-full md:hidden flex justify-center items-center"
+        numberOfMonths={1}
+        locale={es}
+        disabled={disabledDays}
+        showOutsideDays={false}
+        fromMonth={fromMonth}
+        toMonth={toMonth}
+      />
+
+      <div className="flex flex-col gap-4">
+        <div className="[&>p]:text-sm [&>p>span]:rounded-sm [&>p]:flex [&>p]:gap-2 [&>p]:items-center flex flex-col md:flex-row md:gap-5 gap-2 px-1">
+          <p><span className="flex size-4 bg-yellow-300" /> Hoy</p>
+          <p><span className="flex size-4 bg-green-300" /> Disponible</p>
+          <p><span className="flex size-4 bg-red-300" /> No Disponible</p>
+        </div>
+      </div>
+
+
+      <div className="flex flex-col md:flex-row gap-3 md:items-center mt-6">
+        <span className="font-bold w-[120px]">Horario de cita</span>
+        <Select
+          disabled={!date}
+          onValueChange={(value) => {
+            setHora(value)
+          }}>
+          <SelectTrigger className="w-full md:w-[320px]">
+            <SelectValue placeholder="Seleccione la hora de la cita" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectGroup>
+              <SelectLabel>Horarios Disponibles</SelectLabel>
+              {horas.map((item) => (
+                <SelectItem key={item} value={item}>
+                  {item}
+                </SelectItem>
+              ))}
+            </SelectGroup>
+          </SelectContent>
+        </Select>
+      </div>
+
       <div className="flex flex-col-reverse md:flex-row justify-between mt-10 gap-4">
         <CancelButton />
         <Button
-          onClick={() => setAppVigenciaStep()}
+          onClick={() => {
+            setAppVigenciaStep()
+            setAppDataHoraCita(hora)
+          }}
           className="px-10"
         >
           Continuar el tramite

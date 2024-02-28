@@ -22,20 +22,15 @@ export default function VerificarDatosStep() {
           </footer>
         </div>
 
-        <div className="border border-neutral-400 rounded-md">
+        <div className="border border-neutral-300 rounded-md h-fit w-full">
           <header className="p-2 flex justify-center items-center bg-blue-100 rounded-t-md text-blue-800 font-bold">
             Lugar de la cita
           </header>
           <footer className="p-3 flex flex-col justify-center items-center">
-            <p className="text-center">Datos</p>
-            <a
-              href="google.maps"
-              className="text-red-500 font-semibold mt-3 text-center hover:underline"
-            >
-              Ver ubicacion
-            </a>
+            <p className="text-center text-sm">odicina direccion</p>
           </footer>
         </div>
+
       </main>
 
 

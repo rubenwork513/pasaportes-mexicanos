@@ -1,10 +1,10 @@
-interface Estado {
+export interface Estado {
   estado: string
   value: string
   oficinas: Oficina[]
 }
 
-interface Oficina {
+export interface Oficina {
   oficina: string
   direccion: string
 }
@@ -142,35 +142,35 @@ export const estados: Estado[] = [
     oficinas: [
       {
         oficina: "Oficina Central",
-        direccion: ""
+        direccion: "EDIFICIO 'LA NACIONAL', AV. INDEPENDENCIA N 1003 ESQ. JOS MARA MORELOS, COL. CENTRO, C.P. 31020 CHIHUAHUA, CHIHUAHUA"
       },
       {
-        oficina: "Oficina de Enlace Municipal en Cd. Del Carmen, Camp.",
-        direccion: ""
+        oficina: "Oficina de Enlace Chihuahua, Chih. I",
+        direccion: "HIPER PLAZA MIRADOR LOCAL 2D Y 2C, CALLE MIRADOR E INDIANA, C.P, 31000"
       },
       {
-        oficina: "Oficina Central",
-        direccion: ""
+        oficina: "Oficina de Enlace Municipal Cuauhtemoc, Chih.",
+        direccion: "CALLE MORELOS Y 23 FRACCIONAMIENTO SAN ANTONIO, COL. CENTRO, C.P. 31501"
       },
       {
-        oficina: "Oficina de Enlace Municipal en Cd. Del Carmen, Camp.",
-        direccion: ""
+        oficina: "Oficina de Enlace Municipal. Delicias, Chih.",
+        direccion: "AV. SEXTA ORIENTE Y PRIMERA ORIENTE, COL. CENTRO, C.P. 33000"
       },
       {
-        oficina: "Oficina Central",
-        direccion: ""
+        oficina: "Oficina de Enlace Municipal en Hidalgo del Parral,Chih.",
+        direccion: "CALLE 20 DE NOVIEMBRE S/N, COL. CENTRO, C.P. 33800 (FRENTE A LA PLAZA PRINCIPAL) HIDALGO DEL PARRAL, CHIH."
       },
       {
-        oficina: "Oficina de Enlace Municipal en Cd. Del Carmen, Camp.",
-        direccion: ""
+        oficina: "Oficina Central Ciudad Juarez",
+        direccion: "EDIFICIO ARMANDO BONIFACIO CHVEZ MONTAEZ UBICADO EN EJE VIAL JUAN GABRIEL Y ASERRADEROS, SECTOR CENTRAL DE CIUDAD JUÁREZ, CHIHUAHUA, COLONIA MELCHOR OCAMPO, C.P. 32600"
       },
       {
-        oficina: "Oficina Central",
-        direccion: ""
+        oficina: "Oficina de Enlace Municipal en Galerias Tec. Cd. JuÁrez, Chihuahua.",
+        direccion: "AV. TECNOLGICO No. 1770, CENTRO COMERCIAL GALERAS TEC LOCAL A15 COL. FUENTES DEL VALLE C.P. 32500"
       },
       {
-        oficina: "Oficina de Enlace Municipal en Cd. Del Carmen, Camp.",
-        direccion: ""
+        oficina: "Oficina de Enlace Nuevo Casas Grandes, Chihuahua.",
+        direccion: "PRESIDENCIA MUNICIPAL, AV. CONSTITUCIN Y 2 DE ABRIL NO. 300 CENTRO, C.P. 31700"
       },
     ]
   },
@@ -179,48 +179,48 @@ export const estados: Estado[] = [
     value: "ciudad-de-mexico",
     oficinas: [
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Delegacion Alvaro Obregón",
+        direccion: "BATALLN DE SAN PATRICIO S/N, ESQUINA CALLE 10 Y CANARIOS, COL. TOLTECAS, ÁLCALDIA LVARO OBREGÓN, CIUDAD DE MEXICO,"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Delegacion Benito Juarez",
+        direccion: "AV. INSURGENTES SUR No.1391, PISO 7 COL. INSURGENTES MIXCOAC, ALCALDIA BENITO JUÁREZ, C.P. 03920, CIUDAD DE MEXICO"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Delegacion Cajimalpa",
+        direccion: "CENTRO COMERCIAL SANTA FE, LOCAL 1003 PISO 1, VASCO DE QUIROGA No. 3800, COL. ANTIGUA MINA LA TOTOLAPA, ALCALDIA CUAJIMALPA DE MORELOS C.P. 05109, CIUDAD DE MEXICO."
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Delegacion Cuauhtemoc",
+        direccion: "AV. RICARDO FLORES MAGN No. 2, PISO 1 ALA 'B', COL. GUERRERO, ALCALDIA Cuauhtemoc, C. P. 06300, CIUDAD DE MEXICO."
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Delegacion Gustavo A. Madero",
+        direccion: "GRAL. VICENTE VILLADA Y 5 DE FEBRERO, (EDIFICIO ANEXO ALCALDIA G.A.M.) C.P. 07050, CIUDAD DE MEXICO."
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Delegacion Iztacalco",
+        direccion: "AV. RO CHURUBUSCO Y CALLE TE S/N, COL. GABRIEL RAMOS MILLN, ALCALDIA IZTACALCO, C.P. 08000, CIUDAD DE MEXICO."
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Delegacipon Iztapalapa",
+        direccion: "ALDAMA No. 63 ESQ. AYUNTAMIENTO, COL. BARRIO SAN LUCAS, ALCALDIA IZTAPALAPA, C.P. 09000, CIUDAD DE MEXICO."
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Delegacion Miguel Hidalgo 1",
+        direccion: "PARQUE LIRA NO. 94, ESQ. SSTENES ROCHA, COL. OBSERVATORIO, ALCALDIA MIGUEL HIDALGO, C.P. 11860, CIUDAD DE MEXICO."
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Delegacion Miguel Hidalgo 2",
+        direccion: "CENTRO COMERCIAL 'GALERIAS PLAZA DE LAS ESTRELLAS' LOCAL S-2 AV. MELCHOR OCAMPO No. 193, COL. VERNICA ANZURES, ALCALDIA MIGUEL HIDALGO, C.P. 11300, CIUDAD DE MEXICO"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Delegacion Naucalpan",
+        direccion: "AV. MEXICAS N 63, COL. SANTA CRUZ ACATLAN, NAUCALPAN, MEX. C.P. 53150 CENTRO DE SERVICIOS ADMINISTRATIVOS"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Delegacion Tlalpan",
+        direccion: "INSURGENTES SUR CASI ESQ. PERIFRICO COL. VILLA OLMPICA, ALCALDIA TLALPAN, C.P. 14020, CIUDAD DE MEXICO"
       },
     ]
   },
@@ -268,7 +268,7 @@ export const estados: Estado[] = [
       },
       {
         oficina: "Oficina de Enlace San Felipe, Gto.",
-        direccion: "CASA JUREZ PLANTA ALTA, ZONA CENTRO, C.P. 37600. SAN FELIPE, GTO."
+        direccion: "CASA JUÁREZ PLANTA ALTA, ZONA CENTRO, C.P. 37600. SAN FELIPE, GTO."
       },
       {
         oficina: "Oficina de Enlace Pnjamo, Gto.",
@@ -286,7 +286,7 @@ export const estados: Estado[] = [
     oficinas: [
       {
         oficina: "Oficina central",
-        direccion: "CENTRO DE CONGRESOS COPACABANA, AV. COSTERA MIGUEL ALEMN No.63 LOCAL C-16 2do. NIVEL, FRACC. CLUB DEPORTIVO, C.P. 39690, ACAPULCO DE JUREZ, GRO."
+        direccion: "CENTRO DE CONGRESOS COPACABANA, AV. COSTERA MIGUEL ALEMN No.63 LOCAL C-16 2do. NIVEL, FRACC. CLUB DEPORTIVO, C.P. 39690, ACAPULCO DE JUÁREZ, GRO."
       },
       {
         oficina: "Oficina de Enlace Cd. Altamirano, Gro. (Pungarabato)",
@@ -300,7 +300,7 @@ export const estados: Estado[] = [
     oficinas: [
       {
         oficina: "Oficina central",
-        direccion: "AV. JUREZ #400 -A, COL. CENTRO, C.P. 42000 PACHUCA, HIDALGO"
+        direccion: "AV. JUÁREZ #400 -A, COL. CENTRO, C.P. 42000 PACHUCA, HIDALGO"
       },
       {
         oficina: "Oficina de Enlace Tepeji del Ro, Hgo.",
@@ -317,73 +317,76 @@ export const estados: Estado[] = [
     value: "jalisco",
     oficinas: [
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina Central",
+        direccion: "CENTRO COMERCIAL PLAZA BONITA, AV. MEXICO No.3370 COL. VILLA SANTA RITA, C.P. 44690, GUADALAJARA, JALISCO"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Ameca, Jal.",
+        direccion: "CALLE ZARAGOZA No. 66, COL. CENTRO, C.P. 46600"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Arandas, Jal.",
+        direccion: "CALLE LVARO OBREGN 50, UNIDAD ADMINISTRATIVA NO.1 COLONIA CENTRO, C. P. 4780"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Atotonilco el Alto, Jal.",
+        direccion: "UNIDAD ADMINISTRATIVA BENITO JUREZ S/N COL. INFONAVIT, C.P. 47750"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Autln de Navarro, Jal.",
+        direccion: "VENUSTIANO CARRANZA No. 1 COL. CENTRO, C.P. 48900"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de enlace Cd. Guzmn, Jal.",
+        direccion: "JOS CLEMENTE OROZCO No 22-A INT-5, COL. CENTRO, C.P. 49000"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Colotlan, Jal.",
+        direccion: "EDIF. UNISE (UNIDAD REGIONAL DE SERVICIOS DEL ESTADO) PLANTA BAJA KILMETRO 01 CARRETERA COLOTLAN-GUADALAJARA, JALISCO C.P. 46200"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Etzatln, Jal.",
+        direccion: "INDEPENDENCIA 227 EDIF. (PRESIDENCIA MUNICIPAL), COL. CENTRO, C.P.46500"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Guadalajara, Jal. I",
+        direccion: "AV. VALLARTA No. 3233 DENTRO DE LA PLAZA EXHIMODA LOCALES 6F Y 7F"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Guadalajara, Jal. II",
+        direccion: "AV. CIRCUNVALACIN 20700 (GRAN TERRAZA OBLATOS) LOCALES LS-03 Y 04 COL. OBLATOS, C.P.44700 GUADALAJARA, JALISCO"
       },
       {
-        oficina: "",
-        direccion: ""
-      },
-
-      {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Ocotln, Jal.",
+        direccion: "MORELOS No. 20, COL. CENTRO, C.P. 47800"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Tepatitln de Morelos , Jal.",
+        direccion: "MATAMOROS LOCAL No. 21, COL. CENTRO C.P. 47600"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Tlaquepaque, Jal.",
+        direccion: "UNIDAD ADMINISTRATIVA LA PILA SECA, LOCAL No. 2 COL CENTRO C.P. 45500"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Tlaquepaque Sur, Jal.",
+        direccion: "CENTRO COMERCIAL CENTRO SUR ANILLO PERIFRICO SUR No.7835 PRIMER PISO, LOCAL 25A Y 25B COLONIA SANTA MARA TEQUEPEXPAN C.P. 45601 SAN PEDRO TLAQUEPAQUE"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Tonal, Jal.",
+        direccion: "AV. RIO NILO No. 8096 EXPLANADA WAL-MART COL. LOMA DORADA C.P. 45400"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Zapopan, Jal.",
+        direccion: "AV. GUADALUPE No. 6000, COL. CHAPALITA C.P. 45070"
+      },
+      {
+        oficina: "Oficina de Enlace Lagos de Moreno, Jal.",
+        direccion: "NICOLAS BRAVO No. 714, COL. CENTRO, LAGOS DE MORENO JALISCO C.P. 47400"
+      },
+      {
+        oficina: "NICOLAS BRAVO No. 714, COL. CENTRO, LAGOS DE MORENO JALISCO C.P. 47400",
+        direccion: "CALLE INDEPENDENCIA #123, COL. CENTRO, PUERTO VALLARTA, JAL. C.P. 48300"
       },
     ]
   },
@@ -392,36 +395,36 @@ export const estados: Estado[] = [
     value: "estado-de-mexico",
     oficinas: [
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina Central",
+        direccion: "AV. PASEO TOLLOCAN, No. 1195, INT. 27, (PLAZA COMERCIAL 'LA MARKETA') COL. SANTA MARA TOTOLTEPEC, C.P. 50245, TOLUCA, ESTADO DE MEXICO"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Atlacomulco, Edo. de Mex.",
+        direccion: "CENTRO DE SERVICIOS ADMINISTRATIVOS, EDIFICIO 'D'-101 P.B., (FRENTE AL REGISTRO CIVIL REGIONAL), C.P. 50450,"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Tenancingo, Edo. de Mex.",
+        direccion: "AV. MORELOS NO. 102 INTERIOR 7-8 CENTRO COMERCIAL PLAZA JARDN COL. CENTRO TENANCINGO. EDO. DE MEX. C.P. 52400"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Tonatico, Edo. de Mex.",
+        direccion: "CALLE VENUSTIANO CARRANZA S/N ESQUINA CON GALEANA, COL. CENTRO, TONATICO, EDO. DE MEXICO, C.P. 51950"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Valle de Bravo, Edo. de Mex.",
+        direccion: "CALLE NICOLS BRAVO #300B, COL. CENTRO C.P. 51200 VALLE DE BRAVO, EDO. DE MEXICO"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Delegacion CUAUTITLN IZCALLI",
+        direccion: "AV. LA SUPER S/N EDIFICIO OPERAGUA IZCALLI LOCAL A-1 CENTRO URBANO CUAUTITLN, CUAUTITLN IZCALLI, ESTADO DE MEXICO, C.P. 54700"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Delegacion Texcoco",
+        direccion: "CALLE NEZAHUALCOYTL NO. 110, COLONIA CENTRO, C. P. 56100, TEXCOCO, EDO. DE MEXICO"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Delegacion TLALNEPANTLA",
+        direccion: "BOULEVARD MANUEL VILA CAMACHO 1007, LOCAL 3-C, SEGUNDO PISO, COL. SAN LUCAS, TLALNEPANTLA DE BAZ, EDO. MX, C. P. 54055"
       }
     ]
   },
@@ -430,56 +433,56 @@ export const estados: Estado[] = [
     value: "michoacan",
     oficinas: [
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Zitacuaro, Mich.",
+        direccion: "CALLE OCAMPO PTE. No 13 ESQ. 5 DE MAYO (Palacio Municipal), COL. CENTRO C.P.61500"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina Central",
+        direccion: "AV. LZARO CRDENAS No. 2998 PLAZA NUEVA ESPAA COL. CHAPULTEPEC SUR (ENTRE FUERTE DE LORETO Y ALCZAR DE CHAPULTEPEC) C.P. 58260 MORELIA,"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Chern, Mich.",
+        direccion: "INDEPENDENCIA No.78 BARRIO SEGUNDO COL. CENTRO, C.P. 60270"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Lázaro Cárdenas, Mich.",
+        direccion: "AV. LÁZARO CÁRDENAS No. 516, COL. CENTRO, PALACIO MUNICIPAL C.P. 60950, LZARO CRDENAS, MICH."
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Moroleon, Gto",
+        direccion: "BRASIL No. 72 FRACCIONAMIENTO MODELO MOROLEN, GTO"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Peribán de Ramos, Mich.",
+        direccion: "OCAMPO No.1, COL. CENTRO, C.P. 60440, PERIBAN, MICHOACAN"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Sahuayo, Mich.",
+        direccion: "BOULEVARD LZARO CRDENAS SUR #1190 LOCAL 83 PLAZA FERIA SAHUAYO COL. NORIA DE MONTES, SAHUAYO, MICHOACN"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Uruapan, Mich.",
+        direccion: "AV. CHIAPAS No. 93 INTERIOR 201, COL. RAMN FARIAS, C.P. 60050 URUAPAN, MICHOACÁN"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Zacapu, Mich.",
+        direccion: "IGNACIO ALLENDE #91-A COL. CENTRO C.P. 58600"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Zamora, Mich.",
+        direccion: "GUERRERO 82 ORIENTE, COLONIA CENTRO, C.P. 59600 ZAMORA, MICHOACÁN"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Apatzingán, Mich.",
+        direccion: "JOS SOTERO DE CASTANEDA No. 20, COL. CENTRO, C.P. 60600, APATZINGN, MICHOACÁN"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Hidalgo, Mich.",
+        direccion: "GUADALUPE VICTORIA No.17 COL. CENTRO, C.P. 61100 CD. HIDALGO, MICHOACN"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace La Piedad, Mich.",
+        direccion: "PLAZA BOULEVARD LOCAL No. 1-B, COL. CENTRO, C.P. 59300"
       },
     ]
   },
@@ -541,7 +544,7 @@ export const estados: Estado[] = [
       },
       {
         oficina: "Oficina de Enlace San Nicols de los Garza, N.L.",
-        direccion: "AV. JUREZ No. 655 PONIENTE, ENTRE RYON Y CORREGIDORA, ZONA CENTRO, C.P. 66400"
+        direccion: "AV. JUÁREZ No. 655 PONIENTE, ENTRE RYON Y CORREGIDORA, ZONA CENTRO, C.P. 66400"
       },
       {
         oficina: "Oficina de Enlace San Pedro Garza Garca, N.L.",
@@ -563,7 +566,7 @@ export const estados: Estado[] = [
     oficinas: [
       {
         oficina: "Delegacion Oaxaca",
-        direccion: "CALLE LAMOS No. 603, COL. REFORMA, C.P. 68050 CIUDAD DE OAXACA, OAXACA DE JUREZ"
+        direccion: "CALLE LAMOS No. 603, COL. REFORMA, C.P. 68050 CIUDAD DE OAXACA, OAXACA DE JUÁREZ"
       },
     ]
   },
@@ -610,28 +613,28 @@ export const estados: Estado[] = [
     value: "san-luis-potosi",
     oficinas: [
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina Central",
+        direccion: "CALLE RO NAZAS No. 180 y 190, COLONIA LOMAS LOS FILTROS, C.P. 78210, SAN LUIS POTOS"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Cd. Valles, S.L.P.",
+        direccion: "BOCANEGRA 28 LOCAL'A' COLONIA OBRERA C.P. 79050"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de enlace Matehuala, S.L.P.",
+        direccion: "GALEANA S/N ZONA CENTRO C.P 78700"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Ro Verde, S.L.P.",
+        direccion: "BENITO JUÁREZ NORTE 101, ESQ. GABRIEL MARTNEZ, COL. CENTRO, C.P. 79610"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace San Luis Potos, S.L.P",
+        direccion: "TERRAZAS 1280-A, FRACC. TANGAMANGA, C.P. 78269"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Soledad de Graciano Snchez, S.L.P.",
+        direccion: "BLAS ESCONTRIA 832, ESQ. CRUZ VERDE, LOCAL 3, C.P. 78430"
       },
     ]
   },
@@ -640,20 +643,20 @@ export const estados: Estado[] = [
     value: "sinaloa",
     oficinas: [
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina Central",
+        direccion: "PLANTA BAJA Y MEZZANINE, TORRE TRES AFLUENCIAS UBICADO EN BOULEVARD ALFONSO ZARAGOZA MAYTORENA No. 1780 PONIENTE, DESARROLLO URBANO TRES ROS, C.P. 80020"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Guasave Sin.",
+        direccion: "AV. ADOLFO LPEZ MATEOS S/N, COL. DEL BOSQUE, C.P. 81020"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Ahome, Sin. (Los Mochis)",
+        direccion: "PALACIO MUNICIPAL DE AHOME, DEGOLLADO S/N, COLONIA CENTRO. C.P. 81200"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Mazatlan, Sin.",
+        direccion: "CALLE CAMPANA S/N COL. CENTRO, ESQ NGEL FLORES. C.P. 82000"
       },
     ]
   },
@@ -663,39 +666,31 @@ export const estados: Estado[] = [
     oficinas: [
       {
         oficina: "Oficina central",
-        direccion: ""
+        direccion: "RO SONORA Y COMONFORT, EDIFICIO HERMOSILLO, P.B. DEL CENTRO DE GOBIERNO EN HERMOSILLO ESTADO DE SONORA"
       },
       {
-        oficina: "Oficina de enlace",
-        direccion: ""
+        oficina: "Oficina de Enlace Agua Prieta, Son.",
+        direccion: "CALLE INTERNACIONAL Y AVE. CINCO, PLAZA COMERCIAL TERN, LOCAL 2 'A', C.P.84200"
       },
       {
-        oficina: "Oficina de enlace",
-        direccion: ""
+        oficina: "Oficina de Enlace Caborca, Son.",
+        direccion: "CALLE 6TA. ESQ. CON AVENIDA O, COL. CENTRO CABORCA, SONORA C.P. 83600"
       },
       {
-        oficina: "Oficina de enlace",
-        direccion: ""
+        oficina: "Oficina de Enlace Cd. Obregn, Son.",
+        direccion: "SUFRAGIO EFECTIVO ESQUINA CON GUERRERO, INTERIOR S/N, COL. CENTRO, EDIFICIO YAQUI FORUM CUM"
       },
       {
-        oficina: "Oficina de enlace",
-        direccion: ""
+        oficina: "Oficina de Enlace Guaymas, Son.",
+        direccion: "CALLE 21 Y 22 AVE. ALFONSO IBERRI No75, INTERIOR 14, COLONIA CENTRO, GUAYMAS, SONORA."
       },
       {
-        oficina: "Oficina de enlace",
-        direccion: ""
+        oficina: "Oficina de Enlace Navojoa, Son.",
+        direccion: "CALLE ALLENDE, ESQUINA CON CALLE TALAMANTE S/N COL. REFORMA, C.P. 85830 HORARIO LUNES A VIERNES 8:00 A 15:00 HRS"
       },
       {
-        oficina: "Oficina de enlace",
-        direccion: ""
-      },
-      {
-        oficina: "Oficina de enlace",
-        direccion: ""
-      },
-      {
-        oficina: "Oficina de enlace",
-        direccion: ""
+        oficina: "Oficina de Enlace Nogales, Son.",
+        direccion: "AVE. PLUTARCO ELAS CALLES No. 898 LOCAL 4, ENTRE CALLE RUIZ CORTINES Y AVE. ALVARO OBREGON COL. LA MODERNA, C.P. 84055 NOGALES, SONORA"
       },
     ]
   },
@@ -714,28 +709,28 @@ export const estados: Estado[] = [
     value: "tamaulipas",
     oficinas: [
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina Central",
+        direccion: "AVE. CINCO DE MAYO ESQUINA CON HIDALGO #112, ZONA CENTRO, C.P. 87000 CD. VICTORIA, TAMAULIPAS"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Cd. Mante, Tamps",
+        direccion: "AVE. JUÁREZ No. 101 PONIENTE, COL. CENTRO C.P. 89800"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de enlace Matamoros, Tamps.",
+        direccion: "CALLE PRIMERA Y AVE. CONSTITUCIN S/N, C.P. 87330"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Nvo. Laredo, Tamps.",
+        direccion: "GUERRERO ENTRE MACLOVIO HERRERA Y HROES DE NACATAZ CENTRO, C.P. 88000"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Reynosa, Tamps.",
+        direccion: "ZARAGOZA # 496, ENTRE OCAMPO Y CANALES, ZONA CENTRO C.P. 88500, REYNOSA, TAMAULIPAS"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Tampico, Tamps.",
+        direccion: "EMILIO CARRANZA No. 104 PONIENTE, JUNTO AL PALACIO MUNICIPAL, COL. CENTRO C.P. 89000"
       },
     ]
   },
@@ -754,40 +749,32 @@ export const estados: Estado[] = [
     value: "veracruz",
     oficinas: [
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina Central",
+        direccion: "BOULEVARD CRISTBAL COLN NM. 5, FRACCTO. AMPLIACIN JARDINES DE LAS ANIMAS, SECCIN TORRE ANIMAS, XALAPA, VERACRUZ, C.P. 91190"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Boca del Ro, Ver.",
+        direccion: "AVENIDA LAS AMRICAS S/N, ENTRE CARRETERA BOTICARIA MOCAMBO Y RUIZ CORTNEZ COL: YLANG YLANG, LOCAL 3 ZONA T BOCA DEL RO, VER, C.P. 94290"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Coatzacoalcos, Ver.",
+        direccion: "CALLE ZARAGOZA No. 404, COL. CENTRO, C.P. 96400, COATZACOALCOS, VERACRUZ"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Córdoba, Ver.",
+        direccion: "CALLE 1 ENTRE AVENIDA 3 Y 5 No. 306, COL. CENTRO CÓRDOBA, VERACRUZ, C.P. 94500"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Tuxpan, Ver.",
+        direccion: "AV. JUÁREZ S/N, COL. CENTRO, C.P. 92800 TUXPAN, VERACRUZ"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Papantla, Ver.",
+        direccion: "CALLE ARTES S/N, COL. CENTRO PAPANTLA DE OLARTE, VERACRUZ, CP. 93400"
       },
       {
-        oficina: "",
-        direccion: ""
-      },
-      {
-        oficina: "",
-        direccion: ""
-      },
-      {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Orizaba Ver.",
+        direccion: "AV. FCO. I. MADERO S/n ENTRE PONIENTE 1 Y 2 ZONA CENTRO"
       },
     ]
   },
@@ -796,8 +783,8 @@ export const estados: Estado[] = [
     value: "yucatan",
     oficinas: [
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Delegacion Yucatán",
+        direccion: "CALLE 56 'A' No.442, LOCALES 101, 103, 105, 107, 109, 03 Y 05, PASEO MONTEJO, C.P. 97000, MRIDA, YUCATÁN"
       },
     ]
   },
@@ -806,28 +793,28 @@ export const estados: Estado[] = [
     value: "zacatecas",
     oficinas: [
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina Central",
+        direccion: "AV. MEXICO No. 2, COLONIA DEPENDENCIAS FEDERALES EN GUADALUPE ZACATECAS, C.P. 98618"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Fresnillo, Zac.",
+        direccion: "FRANCISCO JAVIER MINA No. 111,ESQUINA 18 DE MARZO,C.P. 99000"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Jerez de Garca Salinas, Zac.",
+        direccion: "CALLE JUÁREZ No.1 ESQ.PORTAL HUMBOLT, CENTROC.P. 99300"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Sombrerete, Zac.",
+        direccion: "HIDALGO No. 232-F,CENTROC.P. 99100"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Juan Aldama, Zac.",
+        direccion: "AV. CENTENARIO SUR No. 33,CENTRO C.P.98300"
       },
       {
-        oficina: "",
-        direccion: ""
+        oficina: "Oficina de Enlace Juchipila, Zac.",
+        direccion: "MIXTON S/N, PRESIDENCIA MUNICIPAL"
       },
     ]
   }

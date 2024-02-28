@@ -19,7 +19,7 @@ export const APP_STATUS = {
 }
 
 export const useStepsStore = create<StepsStore>((set) => ({
-  status: APP_STATUS.SELECT_CITA_LUGAR_STEP,
+  status: APP_STATUS.SELECT_DAY_STEP,
   setStatus: (status: number) => set({ status }),
 }))
 

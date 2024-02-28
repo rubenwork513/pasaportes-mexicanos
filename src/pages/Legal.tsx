@@ -3,8 +3,13 @@ import {
 } from "@/components/ui/accordion"
 import { terminosYCondiciones } from "../data/tyc"
 import MainLayout from "../layouts/MainLayout"
+import { useEffect } from "react"
 
 export default function LegalPage() {
+  useEffect(() => {
+    document.title = "Pasaportes - Terminos y condiciones"
+  }, [])
+
   const { principal, articulos } = terminosYCondiciones
 
   return (

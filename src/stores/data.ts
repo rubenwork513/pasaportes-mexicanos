@@ -8,7 +8,7 @@ interface Data {
   residencia: string
   // cita
   estadoCita: string
-  delegacionCita: string
+  oficinaCita: string
   diaCita: string
   horaCita: string
   //pasaporte
@@ -32,7 +32,7 @@ export const useDataStore = create<DataStore>((set) => ({
     nacionalidad: "",
     residencia: "",
     estadoCita: "",
-    delegacionCita: "",
+    oficinaCita: "",
     diaCita: "",
     horaCita: "",
     vigenciaPrecio: 0,
@@ -65,8 +65,8 @@ export function setAppDataEstadoCita(data: string) {
   useDataStore.getState().setData({ ...useDataStore.getState().data, estadoCita: data })
 }
 
-export function setAppDataDelegacionCita(data: string) {
-  useDataStore.getState().setData({ ...useDataStore.getState().data, delegacionCita: data })
+export function setAppDataOficinaCita(data: string) {
+  useDataStore.getState().setData({ ...useDataStore.getState().data, oficinaCita: data })
 }
 
 export function setAppDataDiaCita(data: string) {
@@ -104,7 +104,7 @@ export function setAppDataClear() {
     nacionalidad: "",
     residencia: "",
     estadoCita: "",
-    delegacionCita: "",
+    oficinaCita: "",
     diaCita: "",
     horaCita: "",
     vigenciaPrecio: 0,
