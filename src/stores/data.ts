@@ -17,7 +17,6 @@ interface Data {
   nombre: string
   apellidos: string
   email: string
-  bank: string
 }
 
 type DataStore = {
@@ -93,10 +92,6 @@ export function setAppDataEmail(data: string) {
   useDataStore.getState().setData({ ...useDataStore.getState().data, email: data })
 }
 
-export function setAppDataBank(data: string) {
-  useDataStore.getState().setData({ ...useDataStore.getState().data, bank: data })
-}
-
 export function setAppDataClear() {
   useDataStore.getState().setData({
     tipoCita: "",
@@ -111,6 +106,5 @@ export function setAppDataClear() {
     nombre: "",
     apellidos: "",
     email: "",
-    bank: "",
   })
 }

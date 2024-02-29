@@ -6,7 +6,7 @@ import {
   FormLabel, FormMessage
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
-import { setAppDataApellidos, setAppDataBank, setAppDataEmail, setAppDataNombre } from "@/stores/data"
+import { setAppDataApellidos, setAppDataEmail, setAppDataNombre } from "@/stores/data"
 import { setAppVerificacionStep } from "@/stores/steps"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { ArrowRight } from "lucide-react"
@@ -22,9 +22,7 @@ const profileFormSchema = z.object({
     .min(2, { message: "Apellidos demasiado cortos." }),
   email: z
     .string({ required_error: "Ingresa tu correo electrónico." })
-    .email({ message: "Ingresa un correo electrónico válido." }),
-  bank: z
-    .string({ required_error: "Ingresa tu entidad bancaria." })
+    .email({ message: "Ingresa un correo electrónico válido." })
 })
 
 type ProfileFormValues = z.infer<typeof profileFormSchema>
@@ -42,7 +40,6 @@ export default function PersonalDataStep() {
     setAppDataNombre(data.nombre)
     setAppDataApellidos(data.apellidos)
     setAppDataEmail(data.email)
-    setAppDataBank(data.bank)
   }
 
   return (
@@ -87,19 +84,6 @@ export default function PersonalDataStep() {
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Correo Electronico</FormLabel>
-                  <FormControl>
-                    <Input {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-            <FormField
-              control={form.control}
-              name="bank"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Entidad Bancaria</FormLabel>
                   <FormControl>
                     <Input {...field} />
                   </FormControl>
