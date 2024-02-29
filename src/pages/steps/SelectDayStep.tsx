@@ -111,7 +111,7 @@ export default function SelectDayStep() {
       </div>
 
 
-      <div className="flex flex-col md:flex-row gap-3 md:items-center mt-6">
+      <div className="flex-col md:flex-row gap-3 md:items-center mt-6 hidden md:flex">
         <span className="font-bold w-[120px]">Horario de cita</span>
         <Select
           disabled={!date}
@@ -132,6 +132,24 @@ export default function SelectDayStep() {
             </SelectGroup>
           </SelectContent>
         </Select>
+      </div>
+
+      <div className="flex flex-col md:flex-row gap-3 md:items-center mt-6 md:hidden">
+        <span className="font-bold w-[120px]">Horario de cita</span>
+        <select
+          disabled={!date}
+          onChange={(e) => {
+            const value = e.target.value;
+            setHora(value);
+          }}
+          className="w-full md:w-[320px]">
+          <option value="">Seleccione la hora de la cita</option>
+          {horas.map((item) => (
+            <option key={item} value={item}>
+              {item}
+            </option>
+          ))}
+        </select>
       </div>
 
       <div className="flex flex-col-reverse md:flex-row justify-end mt-10 gap-4">
