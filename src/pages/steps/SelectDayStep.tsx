@@ -142,7 +142,7 @@ export default function SelectDayStep() {
             const value = e.target.value;
             setHora(value);
           }}
-          className="w-full md:w-[320px]">
+          className="w-full md:w-[320px] p-2 border border-neutral-300 px-3 rounded-md">
           <option value="">Seleccione la hora de la cita</option>
           {horas.map((item) => (
             <option key={item} value={item}>
