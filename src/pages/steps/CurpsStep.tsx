@@ -46,7 +46,7 @@ const MyComponent: React.FC = () => {
   return (
     <div>
       <StepHeader
-        title="CURPs de personas solicitantes"
+        title="Ingrese el CURP de cada persona"
       />
 
       <p className="text-gray-600 mb-6 mt-2">
@@ -62,12 +62,13 @@ const MyComponent: React.FC = () => {
       <form onSubmit={handleSubmit}>
 
         <div className='flex flex-col md:flex-row gap-3 md:items-center my-4 relative'>
-          <p className="font-bold w-[70px] mr-3 md:-mt-14">Cantidad:</p>
+          <p className="font-bold w-[70px] mr-3 md:-mt-12">Cantidad:</p>
           <Select value={selectValue} onValueChange={handleSelectChange}>
             <SelectTrigger className='mb-8 w-full md:w-[300px]'>
               <SelectValue placeholder="Numero de personas" />
             </SelectTrigger>
             <SelectContent>
+              <SelectItem value="0">Numero de personas</SelectItem>
               <SelectItem value="1">1</SelectItem>
               <SelectItem value="2">2</SelectItem>
               <SelectItem value="3">3</SelectItem>
