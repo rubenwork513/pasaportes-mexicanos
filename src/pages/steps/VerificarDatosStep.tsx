@@ -10,10 +10,9 @@ export default function VerificarDatosStep() {
     <div>
       <StepHeader
         title="Verificar Datos"
-        subtitle="Selecciona un estado y una delegacion donde quieres asistir a tu cita"
       />
 
-      <main className="grid gap-5">
+      <main className="grid gap-5 mt-6 md:mt-10">
         <div className="border border-neutral-300 rounded-md">
           <header className="p-2 flex justify-center items-center bg-blue-100 rounded-t-md text-blue-800 font-bold">
             Fecha y hora de cita
@@ -31,11 +30,13 @@ export default function VerificarDatosStep() {
             <p className="text-center">{data.oficinaCita}</p>
           </footer>
         </div>
-
       </main>
 
+      <div className="flex justify-center items-center px-10 md:px-0 py-6 md:py-10 font-bold text-green-700">
+        <p className="text-center">Si tus datos son correctos, da clic en el boton de abajo para ver tu ficha de pago</p>
+      </div>
 
-      <div className="flex flex-col-reverse md:flex-row justify-end mt-10 gap-4">
+      <div className="flex flex-col-reverse md:flex-row justify-end mt-2 gap-4">
         <Button
           onClick={() => setAppSuccessStep()}
           className="px-10"

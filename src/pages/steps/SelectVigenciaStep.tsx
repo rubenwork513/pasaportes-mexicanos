@@ -31,10 +31,10 @@ export default function SelectVigenciaStep() {
         <SelectContent>
           <SelectGroup>
             <SelectLabel>Vigencias Disponibles</SelectLabel>
-            <SelectItem value="1655">3 años - $1655</SelectItem>
-            <SelectItem value="2250">6 años - $2250</SelectItem>
-            <SelectItem value="3940">10 años - $3940</SelectItem>
-            <SelectItem value="5000">Permanente - $5000</SelectItem>
+            <SelectItem value="1655">3 años - $1,655</SelectItem>
+            <SelectItem value="2250">6 años - $2,250</SelectItem>
+            <SelectItem value="3940">10 años - $3,940</SelectItem>
+            <SelectItem value="5000">Permanente - $5,000</SelectItem>
           </SelectGroup>
         </SelectContent>
       </Select>

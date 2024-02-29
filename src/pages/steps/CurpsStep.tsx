@@ -15,32 +15,40 @@ import React, { useState } from 'react';
 
 const MyComponent: React.FC = () => {
   const [selectValue, setSelectValue] = useState<string>('0');
-  const [inputValues, setInputValues] = useState<string[]>([]);
+  const [curps, setCurps] = useState<string[]>([]);
+  const [names, setNames] = useState<string[]>([]);
 
   // Función para manejar cambios en el select
   const handleSelectChange = (value: string) => {
     setSelectValue(value);
     // Resetear los valores de los inputs si cambia el valor del select
-    setInputValues(Array(parseInt(value)).fill(''));
+    setCurps(Array(parseInt(value)).fill(''));
+    setNames(Array(parseInt(value)).fill(''));
   };
 
-  // Función para manejar cambios en los inputs
-  const handleInputChange = (index: number, e: React.ChangeEvent<HTMLInputElement>) => {
-    const newInputValues = [...inputValues];
-    newInputValues[index] = e.target.value;
-    setInputValues(newInputValues);
+  // Función para manejar cambios en los inputs de nombre
+  const handleNameInputChange = (index: number, e: React.ChangeEvent<HTMLInputElement>) => {
+    const newNames = [...names];
+    newNames[index] = e.target.value;
+    setNames(newNames);
+  };
+
+  // Función para manejar cambios en los inputs de CURP
+  const handleCurpInputChange = (index: number, e: React.ChangeEvent<HTMLInputElement>) => {
+    const newCurps = [...curps];
+    newCurps[index] = e.target.value;
+    setCurps(newCurps);
   };
 
   const areInputsValid = () => {
-    return inputValues.every(value => value.length >= 18);
+    return curps.every(value => value.length >= 18);
   };
 
   // Función para manejar el envío de datos
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(inputValues);
-    setAppDataCurps(inputValues)
-    setAppStatusMigratorioStep()
+    setAppDataCurps(curps);
+    setAppStatusMigratorioStep();
   };
 
   return (
@@ -55,7 +63,7 @@ const MyComponent: React.FC = () => {
           href="https://www.gob.mx/curp/"
           className="text-blue-600 hover:underline"
         >
-          aqui
+          aquí
         </a>
       </p>
 
@@ -83,15 +91,24 @@ const MyComponent: React.FC = () => {
           </Select>
         </div>
 
-        {inputValues.map((value, index) => (
-          <div className='flex flex-col gap-2 mb-5' key={index}>
-            <Label>CURP de la persona {index + 1}</Label>
-            <Input
-              type="text"
-              value={value}
-              onChange={(e) => handleInputChange(index, e)}
-              maxLength={18}
-            />
+        {curps.map((_, index) => (
+          <div key={index} className='flex flex-col gap-2 mb-8'>
+            <Label className='mb-2'>Datos de la Persona {index + 1}</Label>
+            <div className='flex flex-col md:flex-row gap-2 md:gap-4'>
+              <Input
+                type="text"
+                placeholder="Nombre"
+                value={names[index]}
+                onChange={(e) => handleNameInputChange(index, e)}
+              />
+              <Input
+                type="text"
+                placeholder="CURP"
+                value={curps[index]}
+                onChange={(e) => handleCurpInputChange(index, e)}
+                maxLength={18}
+              />
+            </div>
           </div>
         ))}
 
@@ -101,7 +118,7 @@ const MyComponent: React.FC = () => {
             className="px-10"
             disabled={!areInputsValid() || selectValue === '0'}
           >
-            Continuar el tramite
+            Continuar el trámite
             <ArrowRight className="ml-2 size-4" />
           </Button>
         </div>
