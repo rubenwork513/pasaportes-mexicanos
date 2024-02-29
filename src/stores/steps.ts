@@ -15,6 +15,7 @@ export const APP_STATUS = {
   PERSONAL_DATA_STEP: 6,
   VERIFICACION_STEP: 7,
   SUCCESS_STEP: 8,
+  LAST_STEP: 9,
   ERROR: -1
 }
 
@@ -57,6 +58,10 @@ export function setAppVerificacionStep() {
 
 export function setAppSuccessStep() {
   useStepsStore.getState().setStatus(APP_STATUS.SUCCESS_STEP)
+}
+
+export function setAppLastStep() {
+  useStepsStore.getState().setStatus(APP_STATUS.LAST_STEP)
 }
 
 export function setAppStatusError() {

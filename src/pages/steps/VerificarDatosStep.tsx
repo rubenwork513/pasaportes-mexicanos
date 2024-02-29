@@ -1,4 +1,3 @@
-import CancelButton from "@/components/CancelButton";
 import StepHeader from "@/components/StepHeader";
 import { Button } from "@/components/ui/button";
 import { useDataStore } from "@/stores/data";
@@ -36,8 +35,7 @@ export default function VerificarDatosStep() {
       </main>
 
 
-      <div className="flex flex-col-reverse md:flex-row justify-between mt-10 gap-4">
-        <CancelButton />
+      <div className="flex flex-col-reverse md:flex-row justify-end mt-10 gap-4">
         <Button
           onClick={() => setAppSuccessStep()}
           className="px-10"

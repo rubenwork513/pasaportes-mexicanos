@@ -1,4 +1,3 @@
-import CancelButton from "@/components/CancelButton"
 import StepHeader from "@/components/StepHeader"
 import { Button } from "@/components/ui/button"
 import {
@@ -100,8 +99,7 @@ export default function SelectCitaLugarStep() {
       </div>
 
 
-      <div className="flex flex-col-reverse md:flex-row justify-between mt-10 gap-4">
-        <CancelButton />
+      <div className="flex flex-col-reverse md:flex-row justify-end mt-10 gap-4">
         <Button
           onClick={() => {
             setAppSelectDayStep()

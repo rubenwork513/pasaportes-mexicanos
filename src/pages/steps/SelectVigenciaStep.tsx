@@ -1,4 +1,3 @@
-import CancelButton from "@/components/CancelButton"
 import StepHeader from "@/components/StepHeader"
 import { Button } from "@/components/ui/button"
 import {
@@ -14,6 +13,7 @@ import { useState } from "react"
 
 export default function SelectVigenciaStep() {
   const [vigencia, setVigencia] = useState("")
+  const [metodoPago, setMetodoPago] = useState("")
 
   return (
     <div>
@@ -25,7 +25,7 @@ export default function SelectVigenciaStep() {
       <Select
         onValueChange={(value) => setVigencia(value)}
       >
-        <SelectTrigger className="w-[330px]">
+        <SelectTrigger className="w-[330px] mb-5">
           <SelectValue placeholder="Vigencia del pasaporte" />
         </SelectTrigger>
         <SelectContent>
@@ -39,15 +39,25 @@ export default function SelectVigenciaStep() {
         </SelectContent>
       </Select>
 
-      <div className="flex flex-col-reverse md:flex-row justify-between mt-10 gap-4">
-        <CancelButton />
+      <Select
+        onValueChange={(value) => setMetodoPago(value)}
+      >
+        <SelectTrigger className="w-[330px]">
+          <SelectValue placeholder="Metodo de Pago" />
+        </SelectTrigger>
+        <SelectContent>
+          <SelectItem value="SPEI">Transferencia Bancaria SPEI</SelectItem>
+        </SelectContent>
+      </Select>
+
+      <div className="flex flex-col-reverse md:flex-row justify-end mt-10 gap-4">
         <Button
           onClick={() => {
             setAppPersonalDataStep()
             setAppDataVigencia(parseInt(vigencia))
           }}
           className="px-10"
-          disabled={!vigencia}
+          disabled={!vigencia || !metodoPago}
         >
           Continuar el tramite
           <ArrowRight className="ml-2 size-4" />

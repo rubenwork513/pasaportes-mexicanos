@@ -10,6 +10,7 @@ import SelectTipoCitaStep from "./steps/SelectTipoCitaStep";
 import SelectVigenciaStep from "./steps/SelectVigenciaStep";
 import SuccessStep from "./steps/SuccessStep";
 import VerificarDatosStep from "./steps/VerificarDatosStep";
+import LastStep from "./steps/LastStep";
 
 export default function IndexPage() {
   const { status } = useStepsStore()
@@ -56,6 +57,9 @@ export default function IndexPage() {
               )}
               {status === APP_STATUS.SUCCESS_STEP && (
                 <SuccessStep />
+              )}
+               {status === APP_STATUS.LAST_STEP && (
+                <LastStep />
               )}
             </div>
           )}
