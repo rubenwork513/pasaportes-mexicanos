@@ -15,9 +15,9 @@ import { ArrowRight } from "lucide-react"
 import { useState } from "react"
 
 const horas = [
-  "08:30", "09:00", "09:30", "10:00", "10:30",
-  "11:00", "11:30", "12:00", "12:30", "13:00",
-  "13:30", "14:00", "14:30", "15:00",
+  "08:30 AM", "09:00 AM", "09:30 AM", "10:00 AM", "10:30 AM",
+  "11:00 AM", "11:30 AM", "12:00 PM", "12:30 PM", "13:00 PM",
+  "13:30 PM", "14:00 PM", "14:30 PM", "15:00 PM",
 ]
 
 export default function SelectDayStep() {
@@ -139,7 +139,7 @@ export default function SelectDayStep() {
           disabled={!hora || !date}
           onClick={() => {
             setAppVigenciaStep()
-            setAppDataDiaCita(format(date as Date, "EEEE dd \'de\' MMMM \'de\' yyyy", { locale: es }) as string)
+            setAppDataDiaCita(format(date as Date, "EEEE dd \'de\' MMMM \'del\' yyyy", { locale: es }) as string)
             setAppDataHoraCita(hora)
           }}
           className="px-10"

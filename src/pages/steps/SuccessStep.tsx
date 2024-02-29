@@ -8,6 +8,15 @@ export default function SuccessStep() {
 
   const { diaCita, horaCita, vigenciaPrecio, curps } = data
 
+  // calcular el precio
+  const precio = vigenciaPrecio * curps.length
+
+  // convertirlo a moneda local
+  const precioLocal = precio.toLocaleString("es-MX", {
+    style: "currency",
+    currency: "MXN",
+  })
+
   return (
     <div>
       <StepHeader
@@ -33,7 +42,7 @@ export default function SuccessStep() {
 
         <div className="flex gap-0 md:gap-3 md:flex-row flex-col">
           Monto a pagar:
-          {vigenciaPrecio && <span>{"$" + vigenciaPrecio * curps.length}</span>}
+          {vigenciaPrecio && <span>{precioLocal}</span>}
         </div>
 
         <div className="flex gap-0 md:gap-3 md:flex-row flex-col">

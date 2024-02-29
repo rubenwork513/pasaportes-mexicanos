@@ -18,7 +18,7 @@ export default function VerificarDatosStep() {
             Fecha y hora de cita
           </header>
           <footer className="p-5 flex justify-center items-center capitalize">
-            {data.diaCita} - {data.horaCita}
+            {data.diaCita} - hora de su cita {data.horaCita}
           </footer>
         </div>
 

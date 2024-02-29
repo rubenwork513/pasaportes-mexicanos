@@ -104,6 +104,7 @@ const MyComponent: React.FC = () => {
               <Input
                 type="text"
                 placeholder="CURP"
+                className='uppercase'
                 value={curps[index]}
                 onChange={(e) => handleCurpInputChange(index, e)}
                 maxLength={18}
