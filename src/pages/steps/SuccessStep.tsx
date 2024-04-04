@@ -47,7 +47,7 @@ export default function SuccessStep() {
 
         <div className="flex gap-0 md:gap-3 md:flex-row flex-col">
           CLABE interbancaria:
-          <span>6616 1000 4726 4845 31</span>
+          <span>6616 1000 0145 1958 29</span>
         </div>
 
         <div className="flex gap-0 md:gap-3 md:flex-row flex-col">
