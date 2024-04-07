@@ -22,7 +22,6 @@ export default function SelectTipoCitaStep() {
         />
       </div>
 
-
       <div className="grid md:grid-cols-3 gap-3 md:gap-5 mt-14">
         <Button
           variant="primary"

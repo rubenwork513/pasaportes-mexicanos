@@ -1,7 +1,7 @@
-import { useDataStore } from "@/stores/data";
 import MainLayout from "../layouts/MainLayout";
 import { APP_STATUS, useStepsStore } from "../stores/steps";
 import CurpsStep from "./steps/CurpsStep";
+import LastStep from "./steps/LastStep";
 import MigratorioStep from "./steps/MigratorioStep";
 import PersonalDataStep from "./steps/PersonalDataStep";
 import SelectCitaLugarStep from "./steps/SelectCitaStep";
@@ -10,13 +10,9 @@ import SelectTipoCitaStep from "./steps/SelectTipoCitaStep";
 import SelectVigenciaStep from "./steps/SelectVigenciaStep";
 import SuccessStep from "./steps/SuccessStep";
 import VerificarDatosStep from "./steps/VerificarDatosStep";
-import LastStep from "./steps/LastStep";
 
 export default function IndexPage() {
   const { status } = useStepsStore()
-  const { data } = useDataStore()
-
-  console.log(data)
 
   return (
     <MainLayout>

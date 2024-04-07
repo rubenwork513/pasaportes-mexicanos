@@ -80,7 +80,7 @@ export default function SelectDayStep() {
         mode="single"
         selected={date}
         onSelect={setDate}
-        className="rounded-md border my-4 p-6 hidden md:flex justify-center items-center"
+        className="rounded-md my-4 hidden md:flex justify-center items-center"
         numberOfMonths={2}
         locale={es}
         disabled={disabledDays}
@@ -93,7 +93,7 @@ export default function SelectDayStep() {
         mode="single"
         selected={date}
         onSelect={setDate}
-        className="rounded-md border my-4 p-6 w-full md:hidden flex justify-center items-center"
+        className="rounded-md my-4 w-full md:hidden flex justify-center items-center"
         numberOfMonths={1}
         locale={es}
         disabled={disabledDays}
