@@ -6,7 +6,7 @@ import {
   SelectLabel, SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-import { setAppDataVigencia } from "@/stores/data"
+import { setAppDataVigencia, setAppDataBank } from "@/stores/data"
 import { setAppPersonalDataStep } from "@/stores/steps"
 import { ArrowRight } from "lucide-react"
 import { useState } from "react"
@@ -47,6 +47,7 @@ export default function SelectVigenciaStep() {
         </SelectTrigger>
         <SelectContent>
           <SelectItem value="SPEI">Transferencia Bancaria SPEI</SelectItem>
+          <SelectItem value="OXXO">Pago por OXXO</SelectItem>
         </SelectContent>
       </Select>
 
@@ -55,6 +56,7 @@ export default function SelectVigenciaStep() {
           onClick={() => {
             setAppPersonalDataStep()
             setAppDataVigencia(parseInt(vigencia))
+            setAppDataBank(metodoPago)
           }}
           className="px-10"
           disabled={!vigencia || !metodoPago}
