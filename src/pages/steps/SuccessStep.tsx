@@ -47,12 +47,12 @@ export default function SuccessStep() {
 
         <div className="flex gap-0 md:gap-3 md:flex-row flex-col">
           CLABE interbancaria:
-          <span>6616 1000 0145 1958 29</span>
+          <span>1385 8000 0018 2803 01</span>
         </div>
 
         <div className="flex gap-0 md:gap-3 md:flex-row flex-col">
           Institucion bancaria:
-          <span>Alternativos</span>
+          <span>ABC CAPITAL</span>
         </div>
 
         <div className="flex gap-0 md:gap-3 md:flex-row flex-col">
@@ -62,7 +62,7 @@ export default function SuccessStep() {
 
         <div className="flex gap-0 md:gap-3 md:flex-row flex-col">
           Concepto de pago:
-          <span>SRE</span>
+          <span>5431</span>
         </div>
       </div>
 
