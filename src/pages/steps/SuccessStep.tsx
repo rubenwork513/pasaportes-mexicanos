@@ -75,7 +75,7 @@ export default function SuccessStep() {
           {bank === "SPEI" && (
             <>
               <span>CLABE interbancaria:</span>
-              <span>1385 8000 0018 2803 01</span>
+              <span>6461 8017 3302 5923 20</span>
             </>
           )}
           {bank === "OXXO" && (
@@ -90,7 +90,7 @@ export default function SuccessStep() {
           <>
             <div className="flex gap-0 md:gap-3 md:flex-row flex-col">
               Institucion bancaria:
-              <span>ABC CAPITAL</span>
+              <span>BANCO STP</span>
             </div>
 
             <div className="flex gap-0 md:gap-3 md:flex-row flex-col">
