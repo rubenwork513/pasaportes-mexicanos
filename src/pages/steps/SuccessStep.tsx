@@ -64,11 +64,6 @@ export default function SuccessStep() {
               <span>Pago por OXXO</span>
             </>
           )}
-          <img
-            src={bank === "SPEI" ? logoSpei : logoOxxo}
-            alt={bank}
-            className="h-4 w-fit"
-          />
         </div>
 
         <div className="flex gap-0 md:gap-3 md:flex-row flex-col">
