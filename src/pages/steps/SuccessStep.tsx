@@ -3,9 +3,6 @@ import { setAppDataClear, useDataStore } from "@/stores/data";
 import { setAppLastStep } from "@/stores/steps";
 import { AlertTriangle } from "lucide-react";
 
-import logoOxxo from "../../assets/oxxo.webp";
-import logoSpei from "../../assets/spei.webp";
-
 export default function SuccessStep() {
   const { data } = useDataStore()
 
