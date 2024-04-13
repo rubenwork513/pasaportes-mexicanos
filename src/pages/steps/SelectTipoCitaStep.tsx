@@ -6,7 +6,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { setAppDataTipoCita } from "@/stores/data";
-import passport from "../../assets/image.jpg";
+import passport from "../../assets/pasaportes.webp";
 import { setAppStatusCurpsStep } from "../../stores/steps";
 
 export default function SelectTipoCitaStep() {
@@ -17,14 +17,14 @@ export default function SelectTipoCitaStep() {
 
   return (
     <>
-      <div className="flex justify-center items-center w-full mb-5">
+      <div className="flex justify-center items-center w-full mb-5 rounded-sm overflow-hidden">
         <img
           src={passport}
           width={550}
         />
       </div>
 
-      <div className="grid gap-3 md:gap-5 mt-10">
+      <div className="grid gap-3 md:gap-5 mt-5 md:mt-10">
         <h2 className="font-bold text-2xl md:text-3xl mt-3">
           Agenda tu cita ahora mismo
         </h2>
