@@ -28,7 +28,7 @@ export default function MigratorioStep() {
   const [ubicacion, setUbicacion] = useState("")
 
   return (
-    <div>
+    <>
       <StepHeader
         title="Estatus migratorio"
         subtitle='Selecciona la opcion que se adecua a tu caso'
@@ -86,6 +86,6 @@ export default function MigratorioStep() {
           <ArrowRight className="ml-2 size-4" />
         </ButtonS>
       </div>
-    </div>
+    </>
   )
 }

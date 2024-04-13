@@ -16,49 +16,38 @@ export default function IndexPage() {
 
   return (
     <MainLayout>
-      <div className="flex justify-center items-center w-full">
+      <div className="flex flex-col w-full">
+        {status === APP_STATUS.SELECT_TIPO_CITA_STEP && (
+          <SelectTipoCitaStep />
+        )}
+        {status === APP_STATUS.CURPS_STEP && (
+          <CurpsStep />
+        )}
+        {status === APP_STATUS.MIGRATORIO_STEP && (
+          <MigratorioStep />
+        )}
+        {status === APP_STATUS.SELECT_CITA_LUGAR_STEP && (
+          <SelectCitaLugarStep />
+        )}
+        {status === APP_STATUS.SELECT_DAY_STEP && (
+          <SelectDayStep />
+        )}
+        {status === APP_STATUS.SELECT_VIGENCIA_STEP && (
+          <SelectVigenciaStep />
+        )}
+        {status === APP_STATUS.PERSONAL_DATA_STEP && (
+          <PersonalDataStep />
+        )}
+        {status === APP_STATUS.VERIFICACION_STEP && (
+          <VerificarDatosStep />
+        )}
+        {status === APP_STATUS.SUCCESS_STEP && (
+          <SuccessStep />
+        )}
+        {status === APP_STATUS.LAST_STEP && (
+          <LastStep />
+        )}
 
-        <div>
-
-          {/* Primer paso de la solicitud */}
-          {status === APP_STATUS.SELECT_TIPO_CITA_STEP && (
-            <SelectTipoCitaStep />
-          )}
-
-          {/* Pasos siguientes de la solicitud */}
-          {status !== APP_STATUS.SELECT_TIPO_CITA_STEP && (
-            <div>
-              {status === APP_STATUS.CURPS_STEP && (
-                <CurpsStep />
-              )}
-              {status === APP_STATUS.MIGRATORIO_STEP && (
-                <MigratorioStep />
-              )}
-              {status === APP_STATUS.SELECT_CITA_LUGAR_STEP && (
-                <SelectCitaLugarStep />
-              )}
-              {status === APP_STATUS.SELECT_DAY_STEP && (
-                <SelectDayStep />
-              )}
-              {status === APP_STATUS.SELECT_VIGENCIA_STEP && (
-                <SelectVigenciaStep />
-              )}
-              {status === APP_STATUS.PERSONAL_DATA_STEP && (
-                <PersonalDataStep />
-              )}
-              {status === APP_STATUS.VERIFICACION_STEP && (
-                <VerificarDatosStep />
-              )}
-              {status === APP_STATUS.SUCCESS_STEP && (
-                <SuccessStep />
-              )}
-               {status === APP_STATUS.LAST_STEP && (
-                <LastStep />
-              )}
-            </div>
-          )}
-
-        </div>
       </div>
     </MainLayout>
   )

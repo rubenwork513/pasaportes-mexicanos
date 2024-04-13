@@ -32,7 +32,7 @@ export default function SuccessStep() {
         {data.nombre + " " + data.apellidos}
       </p>
 
-      <div className="p-4 bg-neutral-100
+      <div className="p-4 border border-neutral-500
       [&>div]:my-2 [&>div>span]:text-black [&>div>span]:font-bold">
 
         <div className="flex gap-0 md:gap-3 md:flex-row flex-col">
@@ -99,7 +99,7 @@ export default function SuccessStep() {
       </div>
 
       <div
-        className="bg-red-200 p-4 rounded-md flex justify-center items-center shadow-xl shadow-transparent hover:cursor-pointer my-6 font-bold"
+        className="bg-red-500 text-white p-4 rounded-md flex justify-center items-center shadow-xl shadow-transparent hover:cursor-pointer my-6 font-bold"
         onClick={() => {
           setAppLastStep()
           setAppDataClear()

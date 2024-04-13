@@ -10,7 +10,7 @@ export default function MainLayout({ children, className }: Props) {
       <Navbar />
       <main className="bg-[#f6e5d4] ">
         <div className={cn(
-          "w-[940px] mx-auto max-w-full md:pt-10 pt-4 px-4 pb-10 min-h-[calc(75vh)]", className
+          "max-w-[640px] mx-auto w-full md:pt-10 pt-4 px-4 pb-10 min-h-[calc(75vh)]", className
         )}>
           {children}
         </div>

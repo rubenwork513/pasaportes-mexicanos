@@ -25,7 +25,7 @@ export default function SelectVigenciaStep() {
       <Select
         onValueChange={(value) => setVigencia(value)}
       >
-        <SelectTrigger className="w-[330px] mb-5">
+        <SelectTrigger className="w-full md:w-[330px] mb-5">
           <SelectValue placeholder="Vigencia del pasaporte" />
         </SelectTrigger>
         <SelectContent>

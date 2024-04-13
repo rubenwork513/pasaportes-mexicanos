@@ -13,7 +13,7 @@ export default function VerificarDatosStep() {
       />
 
       <main className="grid gap-5 mt-6 md:mt-10">
-        <div className="border border-neutral-300">
+        <div className="border border-neutral-500">
           <header className="p-3 flex rounded-t-md text-blue-800 font-bold">
             Fecha y hora de cita
           </header>
@@ -22,7 +22,7 @@ export default function VerificarDatosStep() {
           </footer>
         </div>
 
-        <div className="border border-neutral-300 h-fit w-full">
+        <div className="border border-neutral-500 h-fit w-full">
           <header className="p-3 flex rounded-t-md text-blue-800 font-bold">
             Lugar de la cita
           </header>
