@@ -52,7 +52,7 @@ const MyComponent: React.FC = () => {
   };
 
   return (
-    <div>
+    <>
       <StepHeader
         title="Ingrese el CURP de cada persona"
       />
@@ -124,8 +124,7 @@ const MyComponent: React.FC = () => {
           </Button>
         </div>
       </form>
-    </div>
-
+    </>
   );
 };
 

@@ -18,7 +18,7 @@ export default function IndexPage() {
     <MainLayout>
       <div className="flex justify-center items-center w-full">
 
-        <div className="">
+        <div>
 
           {/* Primer paso de la solicitud */}
           {status === APP_STATUS.SELECT_TIPO_CITA_STEP && (
@@ -27,7 +27,7 @@ export default function IndexPage() {
 
           {/* Pasos siguientes de la solicitud */}
           {status !== APP_STATUS.SELECT_TIPO_CITA_STEP && (
-            <div className="md:p-6">
+            <div>
               {status === APP_STATUS.CURPS_STEP && (
                 <CurpsStep />
               )}

@@ -42,7 +42,7 @@ export default function SelectVigenciaStep() {
       <Select
         onValueChange={(value) => setMetodoPago(value)}
       >
-        <SelectTrigger className="w-[330px]">
+        <SelectTrigger className="w-full md:w-[330px]">
           <SelectValue placeholder="Metodo de Pago" />
         </SelectTrigger>
         <SelectContent>
