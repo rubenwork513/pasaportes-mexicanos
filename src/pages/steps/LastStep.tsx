@@ -1,5 +1,5 @@
 import Button from "@/components/Button";
-import passport from "../../assets/image.png";
+import passport from "../../assets/image.jpg";
 import { setAppStatusSelectTipoCitaStep } from "../../stores/steps";
 import { CheckCheck } from "lucide-react";
 

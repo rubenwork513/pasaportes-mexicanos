@@ -6,7 +6,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { setAppDataTipoCita } from "@/stores/data";
-import passport from "../../assets/image.png";
+import passport from "../../assets/image.jpg";
 import { setAppStatusCurpsStep } from "../../stores/steps";
 
 export default function SelectTipoCitaStep() {
