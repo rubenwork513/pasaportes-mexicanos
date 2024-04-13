@@ -1,7 +1,15 @@
+import { Link } from "react-router-dom"
+
 export default function Footer() {
   return (
-    <footer className="w-full h-10 bg-black fixed inset-x-0 bottom-0 text-white flex items-center justify-center text-sm font-bold">
-      <span className="uppercase">&copy; pasaportes méxicanos</span>
+    <footer className="w-full bg-neutral-600 text-white flex flex-col p-3 py-5 gap-4">
+      <span className="uppercase font-bold">&copy; pasaportes méxicanos</span>
+      <Link
+        to="/tyc"
+        className="text-white text-sm hover:underline"
+      >
+        Terminos y condiciones
+      </Link>
     </footer>
   )
 }

@@ -1,5 +1,5 @@
 import StepHeader from "@/components/StepHeader"
-import { Button } from "@/components/ui/button"
+import Button from "@/components/Button"
 import { Calendar } from "@/components/ui/calendar"
 import {
   Select, SelectContent,
@@ -102,11 +102,11 @@ export default function SelectDayStep() {
         toMonth={toMonth}
       />
 
-      <div className="flex flex-col gap-4">
-        <div className="[&>p]:text-sm [&>p>span]:rounded-sm [&>p]:flex [&>p]:gap-2 [&>p]:items-center flex flex-col md:flex-row md:gap-5 gap-2 px-1">
-          <p><span className="flex size-4 bg-yellow-300" /> Hoy</p>
-          <p><span className="flex size-4 bg-green-300" /> Seleccionado</p>
-          <p><span className="flex size-4 bg-red-300" /> No Disponible</p>
+      <div className="flex flex-wrap gap-3">
+        <div className="[&>p]:text-sm [&>p>span]:rounded-sm [&>p]:flex [&>p]:gap-2 [&>p]:items-center flex flex-wrap md:gap-5 gap-2 px-1">
+          <p className="bg-yellow-300 p-2 py-0.5 rounded-md">Hoy</p>
+          <p className="bg-green-300 p-2 py-0.5 rounded-md">Seleccionado</p>
+          <p className="bg-red-300 p-2 py-0.5 rounded-md">No Disponible</p>
         </div>
       </div>
 
@@ -142,7 +142,7 @@ export default function SelectDayStep() {
             const value = e.target.value;
             setHora(value);
           }}
-          className="w-full md:w-[320px] p-2 border border-neutral-300 px-3 rounded-md">
+          className="w-full md:w-[320px] p-3 border border-neutral-300">
           <option value="">Seleccione la hora de la cita</option>
           {horas.map((item) => (
             <option key={item} value={item}>
@@ -160,7 +160,6 @@ export default function SelectDayStep() {
             setAppDataDiaCita(format(date as Date, "EEEE dd \'de\' MMMM \'del\' yyyy", { locale: es }) as string)
             setAppDataHoraCita(hora)
           }}
-          className="px-10"
         >
           Continuar el tramite
           <ArrowRight className="ml-2 size-4" />

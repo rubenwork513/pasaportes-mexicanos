@@ -1,5 +1,5 @@
 import StepHeader from "@/components/StepHeader"
-import { Button } from "@/components/ui/button"
+import Button from "@/components/Button"
 import {
   Select, SelectContent,
   SelectGroup, SelectItem,
@@ -20,7 +20,7 @@ export default function SelectCitaLugarStep() {
     <div>
       <StepHeader
         title="Estado y delegacion de la cita"
-        subtitle="Selecciona un estado y una delegacion donde quieres asistir a tu cita"
+        subtitle="Selecciona estado delegacion donde quieres asistir a tu cita"
       />
 
       <div className="flex flex-col  gap-5 ">
@@ -86,12 +86,12 @@ export default function SelectCitaLugarStep() {
         </div>
 
         {oficina && (
-          <div className="border border-neutral-300 rounded-md h-fit w-full">
-            <header className="p-2 flex justify-center items-center bg-blue-100 rounded-t-md text-blue-800 font-bold">
+          <div className="border border-neutral-300 h-fit w-full">
+            <header className="p-2 px-3 flex rounded-t-md text-blue-800 font-bold">
               Lugar de la cita
             </header>
-            <footer className="p-3 flex flex-col justify-center items-center">
-              <p className="text-center text-sm">{oficina.direccion}</p>
+            <footer className="p-3 pt-0 flex flex-col justify-center items-center">
+              <p className="text-sm">{oficina.direccion}</p>
             </footer>
           </div>
         )}
@@ -106,7 +106,6 @@ export default function SelectCitaLugarStep() {
             setAppDataEstadoCita(estado)
             setAppDataOficinaCita(oficina?.direccion || "")
           }}
-          className="px-10"
           disabled={!oficina}
         >
           Continuar el tramite

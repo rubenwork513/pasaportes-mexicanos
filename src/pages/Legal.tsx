@@ -14,7 +14,7 @@ export default function LegalPage() {
 
   return (
     <MainLayout>
-      <div className="m-5">
+      <div>
         <h1 className="text-xl md:text-3xl font-bold">Terminos y condiciones</h1>
 
         <p className=" leading-relaxed text-pretty my-4">

@@ -11,7 +11,7 @@ export default function StepHeader({ title, subtitle }: Props) {
       </h3>
 
       {subtitle && (
-        <p className="my-2 mb-7 text-lg text-neutral-700">
+        <p className="my-4 mb-7 text-lg text-neutral-700">
           {subtitle}
         </p>
       )}

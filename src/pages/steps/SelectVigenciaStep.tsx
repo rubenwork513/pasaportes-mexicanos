@@ -1,5 +1,5 @@
 import StepHeader from "@/components/StepHeader"
-import { Button } from "@/components/ui/button"
+import Button from "@/components/Button"
 import {
   Select, SelectContent,
   SelectGroup, SelectItem,
@@ -19,7 +19,7 @@ export default function SelectVigenciaStep() {
     <div>
       <StepHeader
         title="Vigencia del Pasaporte"
-        subtitle="Selecciona una vigencia para tu pasaporte, recuerda que el precio varia segun la vigencia"
+        subtitle="Selecciona una vigencia para tu pasaporte, el precio varia segun la vigencia"
       />
 
       <Select
@@ -58,7 +58,6 @@ export default function SelectVigenciaStep() {
             setAppDataVigencia(parseInt(vigencia))
             setAppDataBank(metodoPago)
           }}
-          className="px-10"
           disabled={!vigencia || !metodoPago}
         >
           Continuar el tramite

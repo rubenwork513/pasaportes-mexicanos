@@ -16,7 +16,7 @@ export const terminosYCondiciones: TerminosYCondiciones = {
   principal: "Este contrato (el 'Contrato') contiene los términos, condiciones y limitaciones que rigen para el uso del sitio y servicio denominado Pasaportes MX en adelante “La Empresa”, y pone a disposición de la persona interesada en su utilización (el 'Usuario') en el sitio pasapirotemexicano.space (el 'Sitio').",
   articulos: [
     {
-      principal: "1. Aceptación del contrato y sus modificaciones",
+      principal: "1. Aceptación del contrato",
       subarticulos: [
         {
           content: "1.1 - El uso del Sistema y el sólo hecho de abonar los honorarios por servicios que La Empresa y el Usuario acuerden para las gestiones encomendadas implica la aceptación sin reservas por parte del Usuario de este contrato"
@@ -35,7 +35,7 @@ export const terminosYCondiciones: TerminosYCondiciones = {
       ]
     },
     {
-      principal: "3. Plazos de Gestión Estimados y Tiempos de Entrega",
+      principal: "3. Plazos de Gestión y Entrega",
       subarticulos: [
         {
           content: "3.1 - El Plazo expresado como “Plazo de Gestión Estimado” es un plazo promedio estimado de referencia para el Usuario que dependen de la agilidad y disponibilidad técnica/operativa de cada Delegación .La Empresa no posee atención preferencial para agilizar las gestiones."
@@ -74,7 +74,7 @@ export const terminosYCondiciones: TerminosYCondiciones = {
       ]
     },
     {
-      principal: "6. Exclusión de responsabilidad de 'La Empresa'",
+      principal: "6. Exclusión de responsabilidad",
       subarticulos: [
         {
           content: "6.1 - El uso del Sitio, del Sistema y del Servicio tal y como se especifica en el presente documento y en cualquier otro es en todos los casos bajo exclusiva responsabilidad y riesgo del Usuario. La Empresa no garantiza la disponibilidad y continuidad de la operación del Sitio y del Servicio. El Usuario toma a su cargo y exime a La Empresa de toda responsabilidad derivada de hechos de caso fortuito o fuerza mayor."
@@ -107,7 +107,7 @@ export const terminosYCondiciones: TerminosYCondiciones = {
       ]
     },
     {
-      principal: "9. Información introducida por el usuario en el sitio",
+      principal: "9. Información introducida por el usuario",
       subarticulos: [
         {
           content: "El Usuario se obliga a no introducir en el Sitio información de carácter obsceno, ofensivo o agraviante, o que contenga amenazas, virus u otros programas perjudiciales o mecanismos para captar o distorsionar información contenida en el Sitio."

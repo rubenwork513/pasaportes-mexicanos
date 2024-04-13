@@ -1,5 +1,5 @@
 import StepHeader from '@/components/StepHeader'
-import { Button as ButtonS } from '@/components/ui/button'
+import ButtonS from '@/components/Button'
 import { setAppDataNacionalidad, setAppDataResidencia } from '@/stores/data'
 import { setAppSelectCitaLugarStep } from '@/stores/steps'
 import { ArrowRight, CheckCheck } from 'lucide-react'
@@ -14,7 +14,7 @@ interface Props {
 function Button({ children, isSelected, onClick }: Props) {
   return (
     <button
-      className={`w-full py-3 md:py-6 px-4 border border-neutral-300 rounded-md flex items-center justify-center ${isSelected ? "bg-[#00281f] text-white" : "bg-white"}`}
+      className={`w-full py-3 md:py-6 px-4 border border-neutral-300 flex items-center justify-center ${isSelected ? "bg-[#0f5735] text-white" : "bg-white"}`}
       onClick={onClick}
     >
       {isSelected && (<CheckCheck className='mr-2' />)}
@@ -81,7 +81,6 @@ export default function MigratorioStep() {
             setAppDataResidencia(ubicacion)
           }}
           disabled={nacionalidad === "Mexicana" && ubicacion === "Mexicana" ? false : true}
-          className="px-10"
         >
           Continuar el tramite
           <ArrowRight className="ml-2 size-4" />

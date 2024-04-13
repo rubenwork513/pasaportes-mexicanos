@@ -20,13 +20,9 @@ export default function SuccessStep() {
   return (
     <div>
       <StepHeader
-        title="Referencia de pago creada con exito!"
-        subtitle="Recuerda que debes de pagar para que tu cita sea agendada, al no realizar su pago este caducara y perdera su turno"
+        title="Referencia de pago creada!"
+        subtitle="Debes de pagar para que tu cita sea agendada, al no realizar su pago este caducara y perdera su turno"
       />
-
-      <div className="flex justify-center items-center p-3 rounded-md mb-5">
-        Referencia de pago valida unicamente 24 horas
-      </div>
 
       <p className="text-lg font-bold text-blue-600">
         Estimado(a)
@@ -36,7 +32,7 @@ export default function SuccessStep() {
         {data.nombre + " " + data.apellidos}
       </p>
 
-      <div className="p-4 border-4 border-dotted border-neutral-500 rounded-md 
+      <div className="p-4 bg-neutral-100
       [&>div]:my-2 [&>div>span]:text-black [&>div>span]:font-bold">
 
         <div className="flex gap-0 md:gap-3 md:flex-row flex-col">
@@ -98,8 +94,12 @@ export default function SuccessStep() {
         )}
       </div>
 
+      <div className="flex justify-center items-center p-3 rounded-md mb-5">
+        Referencia de pago valida unicamente 24 horas
+      </div>
+
       <div
-        className="bg-red-200 p-4 rounded-md flex justify-center items-center shadow-xl shadow-transparent hover:shadow-black/10 hover:cursor-pointer my-6 font-bold"
+        className="bg-red-200 p-4 rounded-md flex justify-center items-center shadow-xl shadow-transparent hover:cursor-pointer my-6 font-bold"
         onClick={() => {
           setAppLastStep()
           setAppDataClear()
@@ -108,10 +108,13 @@ export default function SuccessStep() {
         Finalizar
       </div>
 
-      <div className="border-dotted border-4 border-yellow-500 p-4 flex gap-3 items-center mt-3 rounded-md">
-        <AlertTriangle className="size-9 text-yellow-500" />
+      <div className="border-dotted flex p-2 flex-col gap-3 mt-3 rounded-md">
+        <span className="flex items-center gap-4 font-bold text-lg text-yellow-500">
+          <AlertTriangle className="size-9 " />
+          Importante
+        </span>
         <p>
-          NOTA: Una vez realizado el pago favor de confimar con su comprobante de pago ó captura de pantalla al correo info@turnomicita.com
+          Una vez realizado el pago favor de confimar con su comprobante de pago ó captura de pantalla al correo info@turnomicita.com
         </p>
       </div>
 
